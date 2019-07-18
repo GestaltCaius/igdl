@@ -9,23 +9,9 @@ import {InstagramDownloaderService} from './services/instagram-downloader.servic
 export class AppComponent implements OnInit {
   title = 'ig-save-front';
 
-  images = [];
-
-  constructor(private instagramDownloaderService: InstagramDownloaderService) {}
+  constructor() {}
 
   ngOnInit(): void {
   }
 
-  private removeDuplicates(array: any[], prop: string) {
-    return array.filter((item, index, arr) => {
-      return arr.map(mapItem => mapItem[prop]).indexOf(item[prop]) === index;
-    });
-  }
-
-  search(value: string) {
-    console.log('search clicked')
-    this.instagramDownloaderService.getProfile(value).subscribe(list => {
-      this.images = this.removeDuplicates(list, 'url');
-    });
-  }
 }

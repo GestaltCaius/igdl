@@ -1,0 +1,12 @@
+<div *ngIf="photoList" class="row">
+  <img
+    *ngFor="let photo of photoList"
+    [src]="photo.preview"
+    class="col-12 col-md-4 my-1">
+</div>
+
+<div *ngIf="photo" class="row">
+  <img
+    [src]="photo"
+    class="col-12">
+</div>

@@ -1,38 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">
-    <img src="assets/cat.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-    Instagram Downloader
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">One picture from URL<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">All pictures from profile</a>
-    </div>
-  </div>
-</nav>
+<app-header></app-header>
+
 <div class="container">
 
-  <div class="row my-2 justify-content-center">
-    <h1></h1>
-  </div>
+  <app-search-bar></app-search-bar>
 
-  <div class="row my-2 mx-4 justify-content-center">
-    <div class="input-group mb-3 col-12 col-lg-10">
-      <input #searchBar type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="Search" (keyup.enter)="search(searchBar.value)">
-      <div class="input-group-append">
-        <button class="btn btn-outline-success" type="button" (click)="search(searchBar.value)">Search</button>
-      </div>
-    </div>
-  </div>
+  <app-picture-grid></app-picture-grid>
 
-  <div class="row">
-    <img
-      *ngFor="let image of images; let i = index"
-      [src]="image.preview"
-      class="col-12 col-md-4 my-1">
-  </div>
 </div>
