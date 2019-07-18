@@ -16,7 +16,7 @@ export class SearchBarComponent implements OnInit {
   searchModes = SearchMode;
 
   searchMode: SearchMode = SearchMode.PHOTO; // default mode
-  private isLoading: boolean;
+  isLoading: boolean;
 
   constructor(private instagramDownloaderService: InstagramDownloaderService) {
   }
