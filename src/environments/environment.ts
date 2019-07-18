@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  instagramDownloadApiBaseUrl: 'http://ig-save.herokuapp.com/api'
+  instagramDownloadApiBaseUrl: 'https://ig-save.herokuapp.com/api'
 };
 
 /*
