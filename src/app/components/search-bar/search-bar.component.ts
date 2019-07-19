@@ -28,7 +28,10 @@ export class SearchBarComponent implements OnInit {
   search(query: string) {
     switch (this.searchMode) {
       case SearchMode.PHOTO:
-        this.instagramDownloaderService.getPhoto(query);
+        const re = /.*\/p\/(.*?)\/.*/g;
+        const match = re.exec(query);
+        console.log(match[1]); // abc
+        this.instagramDownloaderService.getPhoto(match[1]);
         break;
       case SearchMode.PROFILE:
         this.instagramDownloaderService.getProfile(query);
